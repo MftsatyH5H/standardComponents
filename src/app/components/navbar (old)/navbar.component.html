@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">{{currentLanguage[0]}}</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">{{currentLanguage[1]}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">{{currentLanguage[2]}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">{{currentLanguage[2]}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">{{currentLanguage[2]}}</a>
+          </li>
+        </ul>
+        <div class="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{currentLanguage[3]}}
+            </button>
+            <ul class="dropdown-menu">
+              <li><button class="dropdown-item" (click)="changeLanguage('english')" href="#">English</button></li>
+              <li><button class="dropdown-item" (click)="changeLanguage('arabic')" href="#">العربية</button></li>
+              <li><button class="dropdown-item" (click)="changeLanguage('french')" href="#">French</button></li>
+            </ul>
+          </div>
+
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder={{currentLanguage[4]}} aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">{{currentLanguage[4]}}</button>
+        </form>
+      </div>
+    </div>
+</nav>
+
