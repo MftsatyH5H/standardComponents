@@ -6,14 +6,19 @@ import { ImageSliderComponent } from './components/image-slider/image-slider.com
 import "/node_modules/bootstrap/dist/js/bootstrap.min.js";
 import { NavbarComponent } from './components/navbar (old)/navbar.component';
 import { NavBarComponent } from './components/nav-bar (new)/nav-bar.component';
+import { MultiImageSliderComponent } from './components/multi-image-slider/multi-image-slider.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 @NgModule({
   declarations: [
     AppComponent,
     ImageSliderComponent,
     NavbarComponent,
-    NavBarComponent
+    NavBarComponent,
+    MultiImageSliderComponent
   ],
   imports: [
+    BrowserModule,
+    CarouselModule.forRoot(),
     BrowserModule,
     AppRoutingModule
   ],

@@ -1,0 +1,14 @@
+    <div class="row">
+        <div class="col-12">
+            <carousel
+            [itemsPerSlide]="6" 
+            [showIndicators]="false"
+            [singleSlideOffset]="true"
+            [interval]="0"
+            >
+             <slide *ngFor="let image of images">
+               <img [src]="image.source" alt="Slide Image" style="display: block; width: 100%;">
+             </slide>
+           </carousel>
+        </div>
+    </div>
