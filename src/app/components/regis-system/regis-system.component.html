@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row m-2">
+        <div class="col-12">
+            <button type="button" class="btn btn-dark m-3 p-4">Dwell Time Pred</button>
+            <button type="button" class="btn btn-dark m-3 p-4">Birth Occupation Pred</button>
+        </div>
+        <div class="col-12">
+            <button type="button" class="btn btn-dark m-3 p-4" data-bs-toggle="modal" data-bs-target="#AllocationModal">Birth Allocation Pred</button>
+            <button type="button" class="btn btn-dark m-3 p-4">4th Button</button>
+        </div>
+    </div>
+</div>
+  <!-- Modal -->
+  <div class="modal fade modal-lg modal-dialog-scrollable" id="AllocationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="AllocationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="AllocationModalLabel">Birth Allocation Pred</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Choose Id:
+          <select class="form-select m-2" [(ngModel)]="SelectedId" (change)="onChangeValue()">
+            <option *ngFor="let id of this.IdList" [value]="id">{{id}}</option>
+          </select>
+          <table class="table table-striped p-1">
+            <thead>
+                <tr>
+                  <th scope="col">Output</th>
+                  <th scope="col"></th><!--These are for the extra fields--> 
+                  <th scope="col"></th>
+                  <th scope="col">Prediction</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let id of this.OutputList">
+                    <th scope="row">{{id}}</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>

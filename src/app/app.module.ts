@@ -8,19 +8,24 @@ import { NavbarComponent } from './components/navbar (old)/navbar.component';
 import { NavBarComponent } from './components/nav-bar (new)/nav-bar.component';
 import { MultiImageSliderComponent } from './components/multi-image-slider/multi-image-slider.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { RegisSystemComponent } from './components/regis-system/regis-system.component';
+import { NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     ImageSliderComponent,
     NavbarComponent,
     NavBarComponent,
-    MultiImageSliderComponent
+    MultiImageSliderComponent,
+    RegisSystemComponent
   ],
   imports: [
     BrowserModule,
     CarouselModule.forRoot(),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
