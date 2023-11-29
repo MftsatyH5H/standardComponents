@@ -7,13 +7,10 @@ import { Component } from '@angular/core';
 })
 export class RegisSystemComponent {
   IdList: number[] = [1,2,3,4,5,6]  
-  OutputList: number[] = []
-  SelectedId :number | undefined
+  SelectedId!:number
+  OutputUser!:{id:number, field1:string, field2:string, field3:string, prediction:string};
   onChangeValue(){
-    if(this.SelectedId != undefined){
       //api request here
-      this.OutputList.push(+this.SelectedId)
-    }
-    console.log(this.OutputList)
+      this.OutputUser= {id:this.SelectedId, field1:'data', field2:'data', field3:'data', prediction:'data'}
   }
 }

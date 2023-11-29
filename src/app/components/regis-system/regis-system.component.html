@@ -23,21 +23,23 @@
           <select class="form-select m-2" [(ngModel)]="SelectedId" (change)="onChangeValue()">
             <option *ngFor="let id of this.IdList" [value]="id">{{id}}</option>
           </select>
-          <table class="table table-striped p-1">
+          <table class="table table-striped p-1" *ngIf="OutputUser != null">
             <thead>
                 <tr>
                   <th scope="col">Output</th>
-                  <th scope="col"></th><!--These are for the extra fields--> 
-                  <th scope="col"></th>
+                  <th scope="col">field 1</th>
+                  <th scope="col">field 2</th>
+                  <th scope="col">field 3</th>
                   <th scope="col">Prediction</th>
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let id of this.OutputList">
-                    <th scope="row">{{id}}</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr>
+                    <th scope="row">{{this.OutputUser.id}}</th>
+                    <td>{{this.OutputUser.field1}}</td>
+                    <td>{{this.OutputUser.field2}}</td>
+                    <td>{{this.OutputUser.field3}}</td>
+                    <td>{{this.OutputUser.prediction}}</td>
                 </tr>
               </tbody>
           </table>
